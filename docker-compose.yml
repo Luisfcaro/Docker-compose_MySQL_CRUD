@@ -5,9 +5,9 @@ services:
     image: mysql:5.7
     container_name: crudmysql_database_container
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
-      - ./database/db.sql:/data/application/init.sql
+      - ./database/init.sql:/data/application/init.sql
     command: --init-file /data/application/init.sql
     environment:
       MYSQL_ROOT_USER: root
